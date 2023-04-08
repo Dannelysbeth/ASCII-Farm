@@ -1,0 +1,13 @@
+type: hyperskill
+title: ASCII Mirror
+language: English
+summary: "<p>Far, far away, in the ASCII lands, there are ASCII animals that urgently\
+  \ need your help. Something is not right with their mirrors — they appear crooked.\
+  \ Let's help them with this anomaly and hit the road.</p><br/><br/>Learn more at\
+  \ <a href=\"https://hyperskill.org/projects/260?utm_source=ide&utm_medium=ide&utm_campaign=ide&utm_content=project-card\"\
+  >https://hyperskill.org/projects/260</a>"
+programming_language: Java
+programming_language_version: 11
+content:
+- ASCII Mirror
+mode: Study

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ASCII_Mirror.iml" filepath="$PROJECT_DIR$/.idea/modules/ASCII_Mirror.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ASCII Mirror/task/ASCII_Mirror.ASCII_Mirror-task.iml" filepath="$PROJECT_DIR$/.idea/modules/ASCII Mirror/task/ASCII_Mirror.ASCII_Mirror-task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ASCII Mirror/task/ASCII_Mirror.ASCII_Mirror-task.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ASCII Mirror/task/ASCII_Mirror.ASCII_Mirror-task.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ASCII Mirror/task/ASCII_Mirror.ASCII_Mirror-task.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ASCII Mirror/task/ASCII_Mirror.ASCII_Mirror-task.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/ASCII_Mirror.util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/ASCII_Mirror.util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/ASCII_Mirror.util.main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/ASCII_Mirror.util.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/ASCII_Mirror.util.test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/ASCII_Mirror.util.test.iml" />
+    </modules>
+  </component>
+</project>

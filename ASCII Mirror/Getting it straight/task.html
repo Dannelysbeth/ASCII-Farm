@@ -1,0 +1,44 @@
+<div class="step-text">
+<h5 id="description">Description</h5>
+<p>Animals in the ASCII land desperately need your help in getting that crooked mirror straight — lend them a hand. That will be the end of your journey.</p>
+<h5 id="objectives">Objectives</h5>
+<p>In the last stage, your task is to horizontally mirror the text to the right of the center line. When you've got a list of modified strings, print them out just like in the previous stage but with a different pattern:</p>
+<pre><code class="java">{modified line} | {reversed modified line}</code></pre>
+<p><code class="java">reversed modified line</code> is a modified line printed backward. Replace the characters that are not horizontally symmetrical with their horizontally-opposite chars: <code class="java">&lt;</code> to <code class="java">&gt;</code>, <code class="java">[</code> to <code class="java">]</code>, <code class="java">{</code> to <code class="java">}</code>, <code class="java">(</code> to <code class="java">)</code>, <code class="java">/</code> to <code class="java">\</code>, and vice versa.</p>
+<h5 id="examples">Examples</h5>
+<p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents the user input. Note that it's not part of the input.</p>
+<p><em>File hierarchy for these examples:</em></p>
+<pre><code class="language-no-highlight">ASCII_Animals/
+├── MooFolder/
+│   ├── Cow.txt
+├── MeowFolder/
+├── HumphFolder/
+│   ├── Camel.txt</code></pre>
+<p><strong>Example 1:</strong></p>
+<pre><code class="language-no-highlight">Input the file path:
+&gt; C:\ASCII_Animals\MooFolder\Cow.txt
+            ^__^ | ^__^
+    _______/(oo) | (oo)\_______
+/\/(       /(__) | (__)\       )\/\
+   | w----||     |     ||----w |
+   ||     ||     |     ||     ||   </code></pre>
+<p><strong>Example 2:</strong></p>
+<pre><code class="language-no-highlight">Input the file path:
+&gt; C:\ASCII_Animals\HumphFolder\Camel.txt
+   //            |            \\
+ _oo\            |            /oo_
+(__/ \  _  _     |     _  _  / \__)
+   \  \/ \/ \    |    / \/ \/  /
+   (         )\  |  /(         )
+    \_______/  \ | /  \_______/
+     [[] [[]     |     []] []]
+     [[] [[]     |     []] []]     </code></pre>
+<p><strong>Example 3:</strong></p>
+<pre><code class="language-no-highlight">Input the file path:
+&gt; C:\ASCII_Animals\MeowFolder\Cat.txt
+File not found!</code></pre>
+<p><strong>Example 4:</strong></p>
+<pre><code class="language-no-highlight">Input the file path:
+&gt; C:\ASCII_Animals\MooFolder
+File not found!</code></pre>
+</div>

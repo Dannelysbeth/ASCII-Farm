@@ -1,0 +1,231 @@
+type: edu
+files:
+- name: src/asciimirror/Main.java
+  visible: true
+  text: |-
+    package asciimirror;
+    import java.util.Scanner;
+
+    public class Main {
+            public static void main(String[] args) {
+                System.out.println("Input the file path:");
+                Scanner scanner = new Scanner(System.in);
+                String filePath = scanner.nextLine();
+                System.out.print(filePath);
+                // System.out.println("                    _______ ");
+                // System.out.println("                   < hello >");
+                // System.out.println("                    ------- ");
+                System.out.println("           ^__^            ");
+                System.out.println("    _______/(oo)            ");
+                System.out.println("/\\/(       /(__)            ");
+                System.out.println("   | w----||                ");
+                System.out.println("   ||     ||                ");
+        }
+    }
+  learner_created: false
+- name: test/example1.txt
+  visible: false
+  text: |2-
+                        _______
+                       < hello >
+                        -------
+                ^__^   /
+        _______/(oo)  /
+    /\/(       /(__)
+       | w----||
+       ||     ||
+  learner_created: false
+- name: test/example2.txt
+  visible: false
+  text: |2-
+       //
+     _oo\
+    (__/ \  _  _
+       \  \/ \/ \
+       (         )\
+        \_______/  \
+         [[] [[]
+         [[] [[]
+  learner_created: false
+- name: test/example3.txt
+  visible: false
+  text: |
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+
+    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+
+    Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+
+    Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+
+    Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+
+    Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+
+    Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
+
+    Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
+
+    Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+  learner_created: false
+- name: test/example4.txt
+  visible: false
+  text: |2-
+                                  |
+                                  |
+                                  |
+                                  |
+                                  |
+                                  |
+                                  |
+                                  |
+                                  |
+                                  |
+  learner_created: false
+- name: test/example5.txt
+  visible: false
+  text: |2-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Hello
+  learner_created: false
+- name: test/MirrorTest.java
+  visible: false
+  text: |-
+    import org.hyperskill.hstest.dynamic.DynamicTest;
+    import org.hyperskill.hstest.exception.outcomes.WrongAnswer;
+    import org.hyperskill.hstest.stage.StageTest;
+    import org.hyperskill.hstest.testcase.CheckResult;
+    import org.hyperskill.hstest.testing.TestedProgram;
+
+
+    import java.io.File;
+    import java.io.IOException;
+    import java.nio.file.Files;
+    import java.util.ArrayList;
+    import java.util.Arrays;
+    import java.util.List;
+
+    public class MirrorTest extends StageTest {
+
+      Object[][] test_data = {
+              {"./test/example1.txt",1},
+              {"./test/example2.txt",1},
+              {"./test/example3.txt",1},
+              {"./test/example4.txt",1},
+              {"./test/example5.txt",1},
+              {"./test/example6.txt",0},
+              {"./test/example4",0},
+              {"./test/???",0},
+              {"./test",0}
+      };
+
+      @DynamicTest(data = "test_data")
+      CheckResult testSolution(String input, int result) {
+        TestedProgram pr = new TestedProgram();
+        String output = pr.start().strip().toLowerCase();
+        String[] strings = output.strip().split("\n");
+        List<String> list = new ArrayList<>(Arrays.asList(strings));
+        list.removeAll(Arrays.asList(""));
+        if(list.size()!=1 || !list.get(0).contains("file path")){
+          throw new WrongAnswer("When the program just started, output should contain exactly 1 non-empty line " +
+                  "with \"file path\" substring");
+        }
+
+        output = pr.execute(input);
+
+        if(result==0){
+          output = output.toLowerCase();
+          strings = output.split("\n");
+          list = new ArrayList<>(Arrays.asList(strings));
+          list.removeAll(Arrays.asList(""));
+          if(list.size()!=1 || !list.get(0).contains("file not found")){
+            throw new WrongAnswer("When the user inputs a file, that can not be correctly opened - program " +
+                    "should inform user, by outputting an one-line error with  \"File not found\" substring");
+          }
+        }
+
+        if(result==1){
+          strings = output.split("\n");
+          list = new ArrayList<>(Arrays.asList(strings));
+
+          List<String> file_str = new ArrayList<>();
+
+          File file = new File(input);
+
+          try {
+            file_str= Files.readAllLines(file.toPath());
+          } catch (IOException io){ }
+
+          if(list.size() != file_str.size()) {
+            throw new WrongAnswer("When the user inputs a file, that can be correctly opened - output should " +
+                    "contain as much lines, as there were in file.");
+          }
+          int max=0;
+          for (String s:file_str) {
+            if(s.length()>=max){
+              max=s.length();
+            }
+          }
+          List<String> result_str= new ArrayList<>();
+          for (String s:file_str) {
+            StringBuilder sb=new StringBuilder();
+            sb.append(s);
+            sb.append(" ".repeat(max-s.length()));
+            StringBuilder res = new StringBuilder();
+            res.append(sb);
+            res.append(" | ");
+            sb.reverse();
+            for (int i=0;i<sb.length();i++) {
+              switch(sb.charAt(i)){
+                case '\\': res.append("/");break;
+                case '/': res.append("\\");break;
+                case '}': res.append("{");break;
+                case '{': res.append("}");break;
+                case ']': res.append("[");break;
+                case '[': res.append("]");break;
+                case ')': res.append("(");break;
+                case '(': res.append(")");break;
+                case '<': res.append(">");break;
+                case '>': res.append("<");break;
+                default: res.append(sb.charAt(i));break;
+              }
+            }
+            result_str.add(res.toString());
+          }
+          for (int i=0;i<list.size();i++) {
+            if (list.get(i).length()!=result_str.get(i).length() || !list.get(i).equals(result_str.get(i))) {
+              throw new WrongAnswer("When the user inputs a file, that can be correctly opened - " +
+                      "each line in output should match the following pattern: \"{modified line} | {reversed modified line}\"");
+            }
+          }
+        }
+        if(!pr.isFinished()){
+          throw new WrongAnswer("Program should finish after outputting the picture");
+        }
+        return CheckResult.correct();
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/projects/260/stages/1320/implement#comment
+status: Unchecked
+record: -1

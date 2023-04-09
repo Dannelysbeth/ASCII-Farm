@@ -89,12 +89,12 @@ files:
 feedback_link: https://hyperskill.org/projects/260/stages/1317/implement#comment
 status: Failed
 feedback:
-  message: "Wrong answer in test #1\n\nAll the printed lines in ascii cow&#39;s picture\
-    \ should be equal to lines in the  example. Make sure, that you&#39;ve not ignored\
-    \ whitespaces at the beginning and at the end of each line\n\nPlease find below\
-    \ the output of your program during this failed test.\nNote that the &#39;&gt;&#39;\
+  message: "Wrong answer in test #1\n\nWhen the user entered any string, program should\
+    \ output exactly 6 non-empty lines, first one should contain user&#39;s input,\
+    \ other 5 ones should contain ascii cow&#39;s picture\n\nPlease find below the\
+    \ output of your program during this failed test.\nNote that the &#39;&gt;&#39;\
     \ character indicates the beginning of the input line.\n\n---\n\nInput the file\
-    \ path:\n&gt;  \n \n            ^__^            \n    _______/(oo)           \
-    \ \n/\\/(       /(__)            \n   | w----||                \n   ||     ||"
-  time: "Sat, 08 Apr 2023 21:55:08 UTC"
+    \ path:\n&gt;  \n\n            ^__^\n    _______/(oo)\n/\\/(       /(__)\n   |\
+    \ w----||\n   ||     ||"
+  time: "Sun, 09 Apr 2023 15:42:46 UTC"
 record: -1

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MirrorTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-04-08T21:55:08" hostname="LEGIONDF" time="0.099">
+<testsuite name="MirrorTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-04-09T15:42:46" hostname="LEGIONDF" time="0.147">
   <properties/>
-  <testcase name="start" classname="MirrorTest" time="0.099">
-    <failure message="java.lang.AssertionError: Wrong answer in test #1&#10;&#10;All the printed lines in ascii cow's picture should be equal to lines in the  example. Make sure, that you've not ignored whitespaces at the beginning and at the end of each line&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;Input the file path:&#10;&gt;  &#10; &#10;            ^__^            &#10;    _______/(oo)            &#10;/\/(       /(__)            &#10;   | w----||                &#10;   ||     ||" type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #1
+  <testcase name="start" classname="MirrorTest" time="0.147">
+    <failure message="java.lang.AssertionError: Wrong answer in test #1&#10;&#10;When the user entered any string, program should output exactly 6 non-empty lines, first one should contain user's input, other 5 ones should contain ascii cow's picture&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;Input the file path:&#10;&gt;  &#10;&#10;            ^__^&#10;    _______/(oo)&#10;/\/(       /(__)&#10;   | w----||&#10;   ||     ||" type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #1
 
-All the printed lines in ascii cow's picture should be equal to lines in the  example. Make sure, that you've not ignored whitespaces at the beginning and at the end of each line
+When the user entered any string, program should output exactly 6 non-empty lines, first one should contain user's input, other 5 ones should contain ascii cow's picture
 
 Please find below the output of your program during this failed test.
 Note that the '&gt;' character indicates the beginning of the input line.
@@ -13,11 +13,11 @@ Note that the '&gt;' character indicates the beginning of the input line.
 
 Input the file path:
 &gt;  
- 
-            ^__^            
-    _______/(oo)            
-/\/(       /(__)            
-   | w----||                
+
+            ^__^
+    _______/(oo)
+/\/(       /(__)
+   | w----||
    ||     ||
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:203)
@@ -70,12 +70,12 @@ Input the file path:
 Start test 1?[0m
 Input the file path:
 >  
- 
-            ^__^            
-    _______/(oo)            
-/\/(       /(__)            
-   | w----||                
-   ||     ||                
+
+            ^__^
+    _______/(oo)
+/\/(       /(__)
+   | w----||
+   ||     ||
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

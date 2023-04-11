@@ -192,8 +192,18 @@ files:
     }
   learner_created: false
 feedback_link: https://hyperskill.org/projects/260/stages/1318/implement#comment
-status: Solved
+status: Failed
 feedback:
-  message: Congratulations!
-  time: "Mon, 10 Apr 2023 12:29:25 UTC"
+  message: "Wrong answer in test #1\n\nWhen the user inputs a file, that can be correctly\
+    \ opened - your program should output all the text from that file line by line\n\
+    \nPlease find below the output of your program during this failed test.\nNote\
+    \ that the &#39;&gt;&#39; character indicates the beginning of the input line.\n\
+    \n---\n\nInput the file path:\n&gt; ./test/example1.txt\n                    _______\
+    \  |                     _______ \n                   &lt; hello &gt; |      \
+    \              &lt; hello &gt;\n                    -------  |               \
+    \      ------- \n            ^__^   /         |             ^__^   /        \n\
+    \    _______/(oo)  /          |     _______/(oo)  /         \n/\\/(       /(__)\
+    \             | /\\/(       /(__)            \n   | w----||                 |\
+    \    | w----||                \n   ||     ||                 |    ||     ||"
+  time: "Tue, 11 Apr 2023 21:03:55 UTC"
 record: -1

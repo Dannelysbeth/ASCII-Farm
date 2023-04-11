@@ -25,7 +25,46 @@ public class Main {
             }
             for (String lineItem : lines) {
                 String modifiedLine = String.format("%-" + maxCharsInLine + "s", lineItem);
-                System.out.println(modifiedLine + " | " + modifiedLine);
+                String reverseLine = "";
+                for (int i = modifiedLine.length(); i > 0; i--) {
+                    char c  = modifiedLine.charAt(i-1);
+                    switch (c) {
+                        case '<' :
+                            c = '>';
+                            break;
+                        case '>' :
+                            c = '<';
+                            break;
+                        case '(' :
+                            c = ')';
+                            break;
+                        case ')' :
+                            c = '(';
+                            break;
+                        case '{' :
+                            c = '}';
+                            break;
+                        case '}' :
+                            c = '{';
+                            break;
+                        case '[' :
+                            c = ']';
+                            break;
+                        case ']' :
+                            c = '[';
+                            break;
+                        case '/' :
+                            c = '\\';
+                            break;
+                        case '\\' :
+                            c = '/';
+                            break;
+                        default:
+                            break;
+                    }
+                    reverseLine = reverseLine + c;
+                }
+                System.out.println(modifiedLine + " | " + reverseLine);
             }
         } catch (Exception e) {
             System.out.println("File not found!");

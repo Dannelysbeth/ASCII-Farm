@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MirrorTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-04-11T21:03:55" hostname="LEGIONDF" time="0.083">
+<testsuite name="MirrorTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-04-11T21:33:44" hostname="LEGIONDF" time="0.082">
   <properties/>
-  <testcase name="start" classname="MirrorTest" time="0.083">
-    <failure message="java.lang.AssertionError: Wrong answer in test #1&#10;&#10;When the user inputs a file, that can be correctly opened - your program should output all the text from that file line by line&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;Input the file path:&#10;&gt; ./test/example1.txt&#10;                    _______  |                     _______ &#10;                   &lt; hello &gt; |                    &lt; hello &gt;&#10;                    -------  |                     ------- &#10;            ^__^   /         |             ^__^   /        &#10;    _______/(oo)  /          |     _______/(oo)  /         &#10;/\/(       /(__)             | /\/(       /(__)            &#10;   | w----||                 |    | w----||                &#10;   ||     ||                 |    ||     ||" type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #1
+  <testcase name="start" classname="MirrorTest" time="0.082">
+    <failure message="java.lang.AssertionError: Wrong answer in test #1&#10;&#10;When the user inputs a file, that can be correctly opened - your program should output all the text from that file line by line&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;Input the file path:&#10;&gt; ./test/example1.txt&#10;                    _______  |  _______                    &#10;                   &lt; hello &gt; | &lt; olleh &gt;                   &#10;                    -------  |  -------                    &#10;            ^__^   /         |         \   ^__^            &#10;    _______/(oo)  /          |          \  (oo)\_______    &#10;/\/(       /(__)             |             (__)\       )\/\&#10;   | w----||                 |                 ||----w |   &#10;   ||     ||                 |                 ||     ||" type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #1
 
 When the user inputs a file, that can be correctly opened - your program should output all the text from that file line by line
 
@@ -13,14 +13,14 @@ Note that the '&gt;' character indicates the beginning of the input line.
 
 Input the file path:
 &gt; ./test/example1.txt
-                    _______  |                     _______ 
-                   &lt; hello &gt; |                    &lt; hello &gt;
-                    -------  |                     ------- 
-            ^__^   /         |             ^__^   /        
-    _______/(oo)  /          |     _______/(oo)  /         
-/\/(       /(__)             | /\/(       /(__)            
-   | w----||                 |    | w----||                
-   ||     ||                 |    ||     ||
+                    _______  |  _______                    
+                   &lt; hello &gt; | &lt; olleh &gt;                   
+                    -------  |  -------                    
+            ^__^   /         |         \   ^__^            
+    _______/(oo)  /          |          \  (oo)\_______    
+/\/(       /(__)             |             (__)\       )\/\
+   | w----||                 |                 ||----w |   
+   ||     ||                 |                 ||     ||
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:203)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -72,14 +72,14 @@ Input the file path:
 Start test 1?[0m
 Input the file path:
 > ./test/example1.txt
-                    _______  |                     _______ 
-                   < hello > |                    < hello >
-                    -------  |                     ------- 
-            ^__^   /         |             ^__^   /        
-    _______/(oo)  /          |     _______/(oo)  /         
-/\/(       /(__)             | /\/(       /(__)            
-   | w----||                 |    | w----||                
-   ||     ||                 |    ||     ||                
+                    _______  |  _______                    
+                   < hello > | < olleh >                   
+                    -------  |  -------                    
+            ^__^   /         |         \   ^__^            
+    _______/(oo)  /          |          \  (oo)\_______    
+/\/(       /(__)             |             (__)\       )\/\
+   | w----||                 |                 ||----w |   
+   ||     ||                 |                 ||     ||   
 
 
 ]]></system-out>

@@ -199,11 +199,12 @@ feedback:
     \nPlease find below the output of your program during this failed test.\nNote\
     \ that the &#39;&gt;&#39; character indicates the beginning of the input line.\n\
     \n---\n\nInput the file path:\n&gt; ./test/example1.txt\n                    _______\
-    \  |                     _______ \n                   &lt; hello &gt; |      \
-    \              &lt; hello &gt;\n                    -------  |               \
-    \      ------- \n            ^__^   /         |             ^__^   /        \n\
-    \    _______/(oo)  /          |     _______/(oo)  /         \n/\\/(       /(__)\
-    \             | /\\/(       /(__)            \n   | w----||                 |\
-    \    | w----||                \n   ||     ||                 |    ||     ||"
-  time: "Tue, 11 Apr 2023 21:03:55 UTC"
+    \  |  _______                    \n                   &lt; hello &gt; | &lt; olleh\
+    \ &gt;                   \n                    -------  |  -------           \
+    \         \n            ^__^   /         |         \\   ^__^            \n   \
+    \ _______/(oo)  /          |          \\  (oo)\\_______    \n/\\/(       /(__)\
+    \             |             (__)\\       )\\/\\\n   | w----||                \
+    \ |                 ||----w |   \n   ||     ||                 |             \
+    \    ||     ||"
+  time: "Tue, 11 Apr 2023 21:33:44 UTC"
 record: -1
